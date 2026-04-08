@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jordan Official | Professional Portfolio</title>
+    <style>
+        /* 4. Background Styling & 10. Aesthetics */
+        :root {
+            --jordan-red: #be0000;
+            --dark-bg: #000000;
+            --white-card: #ffffff;
+            --accent-gray: #f8f8f8;
+        }
+
+        /* Smooth scrolling for professional navigation */
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            margin: 0;
+            background-color: #eeeeee;
+            color: #111;
+        }
+
+        /* 6. Menubar (5 items) */
+        nav {
+            background: var(--dark-bg);
+            padding: 1.2rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 3px solid var(--jordan-red);
+        }
+        .logo { color: white; font-weight: 900; font-size: 1.5rem; letter-spacing: 3px; }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover { color: var(--jordan-red); }
+
+        /* 12. Container Styling */
+        .main-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            background: var(--white-card);
+            padding: 50px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            border-radius: 4px;
+        }
+
+        .section-title {
+            border-left: 6px solid var(--jordan-red);
+            padding-left: 15px;
+            margin-top: 60px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* 1. Two Column Layout */
+        .grid-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        /* 2. Media Containers */
+        .media-box {
+            border: 1px solid #ddd;
+            padding: 10px;
+            background: #fff;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        img { width: 100%; height: auto; display: block; filter: grayscale(10%); transition: 0.5s; }
+        img:hover { filter: grayscale(0%); }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+        }
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+        }
+
+        /* 3. Full Length Tables */
+        .full-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+        }
+        .full-table th { background: var(--dark-bg); color: white; padding: 15px; text-align: left; }
+        .full-table td { padding: 15px; border-bottom: 1px solid #eee; }
+
+        /* 5. Nested Lists */
+        .specs-list > ul > li { font-weight: bold; margin-top: 15px; }
+        .specs-list ul ul li { font-weight: normal; color: #555; }
+
+        /* 11. Footer */
+        footer {
+            background: var(--dark-bg);
+            color: #777;
+            text-align: center;
+            padding: 50px;
+            margin-top: 60px;
+        }
+
+        /* 9. Added Feature (Hover Button) */
+        .btn-shop {
+            background: var(--jordan-red);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            cursor: pointer;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+        .btn-shop:hover { background: #333; transform: scale(1.05); }
+
+        @media (max-width: 768px) { .grid-layout { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">JORDAN</div>
+        <div class="nav-links">
+            <a href="#new">New Releases</a>
+            <a href="#men">Men</a>
+            <a href="#women">Women</a>
+            <a href="#kids">Kids</a>
+            <a href="#sale">Sale</a>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <header style="text-align: center; margin-bottom: 60px;">
+            <h1 style="font-size: 3rem; margin-bottom: 0;">AIR JORDAN COLLECTION</h1>
+            <p style="color: #666; letter-spacing: 4px;">ESTABLISHED 1984</p>
+        </header>
+
+        <div class="grid-layout">
+            <div>
+                <h2 id="new" class="section-title">New Releases</h2>
+                <p>The Air Jordan line continues its reign with the latest Spring 2026 collection. This season, the brand focuses on "Reimagined" classics.</p>
+                <p>Leading the pack is the AJ4 'Atmosphere', a blend of high-performance materials and a color palette inspired by early morning flights.</p>
+                <div class="media-box"><img src="https://images.unsplash.com/photo-1552346154-21d32810aba3?w=600" alt="New Image 1"></div>
+                <p>Every stitch in the new release represents a commitment to the legacy Michael Jordan started decades ago on the hardwood.</p>
+                <p>Collectors can expect premium leather finishes and original 'Nike Air' heel branding for that authentic retro feel.</p>
+                <p>Quantities are strictly limited to maintain the exclusivity that defines the Jordan Brand identity globally.</p>
+            </div>
+
+            <div>
+                <h2 class="section-title">Flight In Motion</h2>
+                <div class="media-box">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/VDI1_b19N_U?si=BVieYfZ003oE3E2V" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <p style="text-align:center; font-size: 0.8rem; padding: 5px;">Video 1: Commercial Spotlight</p>
+                </div>
+                
+                <div class="specs-list">
+                    <h3>Performance Specs</h3>
+                    <ul>
+                        <li>Sole Technology
+                            <ul>
+                                <li>Encapsulated Air-Sole</li>
+                                <li>Solid Rubber Outsole</li>
+                                <li>Circular Traction Pattern</li>
+                            </ul>
+                        </li>
+                        <li>Upper Material
+                            <ul>
+                                <li>Genuine Grain Leather</li>
+                                <li>Durabuck Overlays</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <h2 id="men" class="section-title">Men's Premium Selection</h2>
+        <div class="grid-layout">
+            <div class="media-box"><img src="https://images.unsplash.com/photo-1597045566677-8cf032ed6634?w=600" alt="Men Image 2"></div>
+            <div class="media-box">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/VDI1_b19N_U?si=BVieYfZ003oE3E2V" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p style="text-align:center; font-size: 0.8rem; padding: 5px;">Video 2: Men's Tech Review</p>
+            </div>
+        </div>
+
+        <h2 id="women" class="section-title">Women's Luxury Series</h2>
+        <div class="grid-layout">
+            <div class="media-box"><img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=600" alt="Women Image 3"></div>
+            <div class="media-box"><img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=600" alt="Women Image 4"></div>
+        </div>
+
+        <h2 id="kids" class="section-title">Kids & Juniors</h2>
+        <div class="grid-layout">
+            <div>
+                <div class="media-box">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/VDI1_b19N_U?si=BVieYfZ003oE3E2V" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <p style="text-align:center; font-size: 0.8rem; padding: 5px;">Video 3: The Next Generation</p>
+                </div>
+            </div>
+            <div>
+                <div class="media-box"><img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=600" alt="Kids Image 5"></div>
+            </div>
+        </div>
+
+        <h2 id="sale" class="section-title">Global Inventory & Sale</h2>
+        <table class="full-table">
+            <tr><th>Region</th><th>Stock Status</th><th>Sale Price</th></tr>
+            <tr><td>Nairobi</td><td>In Stock</td><td style="color:var(--jordan-red)">$145.00</td></tr>
+            <tr><td>New York</td><td>Limited</td><td style="color:var(--jordan-red)">$160.00</td></tr>
+            <tr><td>London</td><td>Sold Out</td><td>---</td></tr>
+        </table>
+
+        <h3>Authentication Standards</h3>
+        <table class="full-table">
+            <tr><th>Feature</th><th>Material</th><th>Status</th></tr>
+            <tr><td>Heel Tab</td><td>Hardened Polyurethane</td><td>Verified</td></tr>
+            <tr><td>Insole</td><td>EVA Foam padding</td><td>Verified</td></tr>
+        </table>
+
+        <div style="text-align: center; margin: 40px 0;">
+            <button class="btn-shop">Enter Official Shop</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Jordan Brand Project | Information Technology Final Submission</p>
+        <p>Built with ❤️ in Nairobi, Kenya | Hosted on GitHub</p>
+    </footer>
+
+</body>
+</html>
